@@ -127,24 +127,26 @@ accidentally go live.
 
 ---
 
-## 4. Using a real portrait
+## 4. The founder portrait
 
-The hero ships with a branded gradient card because no photo was supplied — the brief rules out
-stock or generated photos of people.
+The hero uses `assets/img/kaeti.jpg` (566×708, a 4:5 crop of the supplied photo), shown inside an
+arched frame. The crop was taken inside the print so no table or paper border shows.
 
-To swap in a real portrait, replace the `<figure class="portrait">` block in the hero with:
+To replace it:
 
 ```html
 <figure class="portrait">
   <img class="portrait__img" src="assets/img/kaeti.jpg"
        alt="Kaeti, founder of Kaeti Enterprises"
-       width="800" height="1000" fetchpriority="high">
+       width="566" height="708" fetchpriority="high" decoding="async">
 </figure>
 ```
 
-The commented instructions sit directly above that block in `index.html`. Keep the alt text
-descriptive, keep `width`/`height` set to avoid layout shift, and compress the file (WebP or a
-quality-80 JPEG is plenty).
+Keep the new file at a 4:5 ratio (e.g. 800×1000) so it fills the arch without awkward cropping,
+match `width`/`height` to the real pixel dimensions to avoid layout shift, keep the alt text
+descriptive, and compress (a quality-85 progressive JPEG or WebP is plenty). If no photo is
+available at all, the `.portrait` element still falls back to the branded plum gradient — just
+remove the `<img>` and the frame keeps its shape.
 
 ---
 
@@ -190,7 +192,7 @@ After deploying, do a final pass:
 
 - [ ] Fill in `direct`, `social`, and `instagram` links in `content.js`
 - [ ] Set `formEndpoint` (or leave the stub and remove the form if you prefer email only)
-- [ ] Add real portrait, or keep the branded gradient card
+- [ ] Replace the portrait in `assets/img/kaeti.jpg` if a newer headshot is preferred
 - [ ] Add real stats, case studies, and testimonials — or leave the sections hidden
 - [ ] Update the page title, meta description, and JSON-LD with the live domain
 - [ ] Add an `og:image` (1200×630) and set `og:url` once the domain is known

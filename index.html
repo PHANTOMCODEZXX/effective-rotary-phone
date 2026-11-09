@@ -76,14 +76,10 @@
 
     <!-- ============================================================
          HERO
-         Portrait: this build ships with a branded gradient card because
-         no photo was supplied. To use a real portrait, replace the
-         <figure class="portrait"> block with:
-         <figure class="portrait">
-           <img class="portrait__img" src="assets/img/kaeti.jpg"
-                alt="Kaeti, founder of Kaeti Enterprises" width="800" height="1000"
-                fetchpriority="high">
-         </figure>
+         Founder portrait: assets/img/kaeti.jpg, cropped to a 4:5 frame
+         so it fills the arch without distortion. To swap the photo:
+         keep a 4:5 crop, replace the src, and update alt text plus the
+         width/height attributes to match the new file.
          ============================================================ -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__glow" aria-hidden="true"></div>
@@ -110,8 +106,14 @@
 
         <div class="hero__media">
           <figure class="portrait">
+            <img class="portrait__img" src="assets/img/kaeti.jpg"
+                 alt="Kaeti, founder of Kaeti Enterprises"
+                 width="566" height="708" fetchpriority="high" decoding="async">
+            <!-- No photo to use? Delete the <img> above and uncomment these
+                 two layers to restore the branded gradient portrait card.
             <div class="portrait__glow" aria-hidden="true"></div>
             <span class="portrait__monogram" aria-hidden="true">K</span>
+            -->
             <span class="portrait__rule" aria-hidden="true"></span>
             <figcaption class="portrait__caption">
               <span class="portrait__name">Kaeti</span>

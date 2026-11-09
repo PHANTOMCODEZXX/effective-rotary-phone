@@ -659,7 +659,7 @@ body.nav-open { overflow: hidden; }
   color: var(--ink-muted);
 }
 
-/* Portrait / image slot */
+/* Portrait: photo, or the branded gradient card as a no-photo fallback */
 .hero__media { justify-self: start; width: min(100%, 440px); }
 
 .portrait {
